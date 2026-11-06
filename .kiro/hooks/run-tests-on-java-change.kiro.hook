@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Run unit tests on Java change",
+  "description": "Runs all unit tests with Maven whenever a Java source or test file is saved.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["src/main/java/**/*.java", "src/test/java/**/*.java"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A Java file was changed. Run all unit tests with `mvn test` from the project root. Maven may print a warning about a missing 'default' profile on stderr, so judge by BUILD SUCCESS and the test totals. If any test fails, show the failing tests and fix the cause. Report the totals briefly."
+  }
+}
