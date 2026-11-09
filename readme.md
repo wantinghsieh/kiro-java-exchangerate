@@ -1,3 +1,5 @@
+this is a sample for requirements.md,design.md, tasks.md then generate code
+
 1.
 mkdir kiro-java-exchangerate
 
